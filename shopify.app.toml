@@ -1,31 +1,30 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "45062ec0ddf88562bb3b798eb7a98127"
-application_url = "https://example.com/"
-embedded = true
-name = "cloudflare-react-router7-shopify-d1"
-handle = "cloudflare-react-router7-shopify-d1"
+client_id = "1dd486cdad772bc74d2279301f540051"
+application_url = "https://supply-me.richard-1dd.workers.dev/"
+embedded = false
+name = "supply-me"
 
 [build]
-include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-04"
 
-  [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
-
-  [[webhooks.subscriptions]]
-  topics = [ "app/scopes_update" ]
-  uri = "/webhooks/app/scopes_update"
+#  [[webhooks.subscriptions]]
+#  topics = [ "app/uninstalled" ]
+#  uri = "/webhooks/app/uninstalled"
+#
+#  [[webhooks.subscriptions]]
+#  topics = [ "app/scopes_update" ]
+#  uri = "/webhooks/app/scopes_update"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://supply-me.richard-1dd.workers.dev/api/auth" ]
 
 [pos]
 embedded = false

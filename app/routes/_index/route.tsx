@@ -5,7 +5,7 @@ import { AppProvider } from "@shopify/shopify-app-react-router/react";
 import { login } from "../../shopify.server";
 
 const APP_NAME = "Shopify App Template - Cloudflare Workers";
-const APP_HANDLE = "cf-worker-shopify";
+const APP_HANDLE = "supply-me";
 
 
 export const loader = async ({ request, context }: LoaderFunctionArgs) => {
@@ -30,7 +30,7 @@ export default function App() {
             This is an example of what your domain would look like if a user visits from outside of Shopify App Bridge. You can customize this page to your liking, just make sure to enter the
             information for your application and remove this placeholder.
           </s-paragraph>
-          <div style={{ 
+          <div style={{
             textAlign: 'center',
             padding: '20px 0'
           }}>

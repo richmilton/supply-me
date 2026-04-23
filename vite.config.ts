@@ -11,4 +11,10 @@ export default defineConfig({
     reactRouter(),
     tsconfigPaths(),
   ],
+  build: {
+    rollupOptions: {
+      // This prevents Vite from trying to find the file on your disk
+      external: ["virtual:react-router/server-build"],
+    },
+  },
 });

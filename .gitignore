@@ -11,3 +11,7 @@
 .wrangler
 .dev.vars*
 .shopify
+
+# Intellij
+.idea/
+.env.*

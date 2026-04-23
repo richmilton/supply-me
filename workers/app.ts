@@ -1,5 +1,5 @@
 import { createRequestHandler } from "react-router";
-import { initializeShopifySessionsTable } from "../app/db.server";
+import { initializeShopifySessionsTable } from "~/db.server";
 
 // Define your Env type with all your bindings
 interface Env {
@@ -25,10 +25,19 @@ declare module "react-router" {
   }
 }
 
-const requestHandler = createRequestHandler(
-  () => import("virtual:react-router/server-build"),
-  import.meta.env.MODE,
-);
+const createRequestHandlerCatcher = () => {
+  try {
+    return createRequestHandler(
+        () => import("virtual:react-router/server-build"),
+        import.meta.env.MODE,
+    )
+  } catch (error) {
+    //ignore
+    return ServerBuild
+  }
+}
+
+const requestHandler = createRequestHandlerCatcher()
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext) {
@@ -51,7 +60,7 @@ export default {
       } catch (error) {
         console.error('Failed to initialize Shopify sessions table:', error);
       }
-      
+
       return requestHandler(request, loadContext);
     } catch (error) {
       console.error('Worker error:', error);

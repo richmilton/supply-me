@@ -9,10 +9,9 @@
   },
   "upload_source_maps": true,
   "vars": {
-    "SHOPIFY_APP_URL": "https://example.com/",
-    "SCOPES": "write_products",
-    "SHOPIFY_API_KEY": "your_api_key_here", // Don't use this in production, use secrets in the dashboard https://developers.cloudflare.com/workers/configuration/secrets/#adding-secrets-to-your-project
-    "SHOPIFY_API_SECRET": "your_api_secret_here" // Don't use this in production, use secrets in the dashboard https://developers.cloudflare.com/workers/configuration/secrets/#adding-secrets-to-your-project
+    "SHOPIFY_APP_URL": "https://supply-me.richard-1dd.workers.dev/",
+    "SCOPES": "write_metaobject_definitions,write_metaobjects,write_products", // adjust scopes as needed
+    "SHOPIFY_API_KEY": "1dd486cdad772bc74d2279301f540051" // Don't use this in production, use secrets in the dashboard https://developers.cloudflare.com/workers/configuration/secrets/#adding-secrets-to-your-project// Don't use this in production, use secrets in the dashboard https://developers.cloudflare.com/workers/configuration/secrets/#adding-secrets-to-your-project
   },
   "d1_databases": [
     {

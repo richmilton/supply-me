@@ -31,6 +31,7 @@ export default function App() {
           </Link>
           <Link to="/app/additional">Additional page</Link>
           <Link to="/app/d1example">D1 Example</Link>
+          <Link to="/app/wanky">Wanky page</Link>
         </NavMenu>
         <Outlet />
       </PolarisAppProvider>
