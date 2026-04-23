@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.0.0",
-    "@react-router/fs-routes": "^7.6.1",
+    "@react-router/fs-routes": "^7.14.2",
     "@shopify/app-bridge-react": "^4.1.10",
     "@shopify/polaris": "^13.9.5",
     "@shopify/shopify-api": "^11.12.0",
